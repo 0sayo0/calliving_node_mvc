@@ -1,0 +1,26 @@
+header.bg-teal-600.p-4
+  div(class="container mx-auto flex flex-col md:flex-row justify-between items-center")
+    a(class="flex items-center justify-center gap-3" href="/")
+      img(src="/img/calliving-removebg-white.png" class="w-[50px]" alt="Calliving logo")
+      h1.text-2xl.text-white.font-extrabold.text-center Calliving
+        span.font-normal Inmuebles
+
+    nav(class="my-5 text-sm flex flex-col gap-4 items-center md:flex md:flex-row md:gap-6 md:items-center font-bold text-white")
+      a(href="/auth/sign-up" class="hover:text-rose-200 transition-all") Crear cuenta
+      a(href="/auth/login" class="hover:text-rose-200 transition-all") Iniciar sesión
+
+div(class="bg-teal-700 py-5 lg:block shadow-md shadow-rose-500")
+  div(class="container mx-auto flex items-center gap-6 flex-col sm:flex-col lg:flex-row justify-evenly")
+    nav(class="flex flex-col md:flex-row gap-6 md:gap-4 items-center")
+      a(href="/" class="text-sm font-bold uppercase text-neutral-100 hover:text-rose-300 transition-all hover:-translate-y-1 duration-200") Todos
+      a(href="/categories/1" class="text-sm font-bold uppercase text-neutral-100 hover:text-rose-300 transition-all hover:-translate-y-1 duration-200") Casas
+      a(href="/categories/2" class="text-sm font-bold uppercase text-neutral-100 hover:text-rose-300 transition-all hover:-translate-y-1 duration-200") Departamentos
+      a(href="/categories/3" class="text-sm font-bold uppercase text-neutral-100 hover:text-rose-300 transition-all hover:-translate-y-1 duration-200") Bodegas
+      a(href="/categories/4" class="text-sm font-bold uppercase text-neutral-100 hover:text-rose-300 transition-all hover:-translate-y-1 duration-200") Terrenos
+      a(href="/categories/5" class="text-sm font-bold uppercase text-neutral-100 hover:text-rose-300 transition-all hover:-translate-y-1 duration-200") Cabañas
+    form(action="/browser" method="POST" class="flex gap-3 items-center")
+      input(type="hidden" name="_csrf" value= csrfToken)
+      label(for="term" class="text-sm uppercase font-bold text-neutral-200") Búsqueda
+      input(text="text" id="term" name="term" placeholder="Buscar propiedades" class="p-2 rounded shadow-md shadow-rose-500 text-sm")
+
+      input(type="submit" class="transition-all bg-teal-800 hover:bg-teal-500 hover:shadow-md hover:shadow-rose-500 rounded-lg text-neutral-100 uppercase font-bold p-2 cursor-pointer text-sm" value="Buscar")
