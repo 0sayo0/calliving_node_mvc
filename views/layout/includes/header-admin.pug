@@ -7,7 +7,7 @@ header(class="bg-teal-600 p-4 block shadow-md shadow-rose-500")
 
     nav(class="my-5 text-sm flex flex-col md:flex-row justify-center items-center gap-6 md:flex md:gap-6 md:items-center font-bold text-white")
       a(href="/my-properties") Mis propiedades
-      a(href="/my-profile") Mi perfil
+      a(href=`/user/my-profile`) Mi perfil
 
       form(action="/auth/logout" method="POST")
         input(type="hidden" name="_csrf" value=csrfToken)

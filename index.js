@@ -5,6 +5,7 @@ import userRouter from "./routes/userRouter.js";
 import propertiesRouter from "./routes/propertiesRouter.js";
 import appRouter from "./routes/appRouter.js";
 import apiRouter from "./routes/apiRouter.js";
+import profileRouter from "./routes/profileRouter.js";
 import db from "./config/db.js";
 
 //Create the app
@@ -39,6 +40,7 @@ app.use(express.static("public"));
 app.use("/", appRouter);
 app.use("/auth", userRouter);
 app.use("/", propertiesRouter);
+app.use("/user", profileRouter);
 app.use("/api", apiRouter);
 
 //Define a port and start the project
