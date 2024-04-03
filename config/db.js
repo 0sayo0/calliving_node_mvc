@@ -16,7 +16,7 @@ const db = new Sequelize(
     },
     pool: {
       //Configure behavior for new or existing connections per person
-      max: 5, //maximum connections
+      max: 15, //maximum connections
       min: 0, //minimum connections
       acquire: 30000, //time before mark an error
       idle: 10000, //time that must elapse to terminate a connection to the database to free space or memory
