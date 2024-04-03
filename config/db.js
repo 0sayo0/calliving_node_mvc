@@ -9,7 +9,7 @@ const db = new Sequelize(
   process.env.DB_PASS,
   {
     host: process.env.DB_HOST,
-    port: 3306,
+    port: 3307,
     dialect: "mysql",
     define: {
       timestamps: true, //When a user registers it adds two extra columns to the users table
